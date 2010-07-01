@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : MundoPrueba.xml
+    Created on : 6 de mayo de 2010, 07:21 PM
+    Author     : diego
+    Description:
+        Purpose of the document follows.
+-->
+
+<mundo>
+    <versión>0.9</versión>
+    <título>Mundo de prueba</título>
+    <descripción>Primer mundo. La idea es probar el esquema de persistencia.</descripción>
+    <visualización>
+        <punto x="0" y="0"/>
+        <punto x="50" y="50"/>
+    </visualización>
+    <paredes>
+        <pared grosor="0.1">
+            <punto x="40" y="40"/>
+            <punto x="25" y="40"/>
+        </pared>
+        <pared grosor="0.1">
+            <punto x="25" y="40"/>
+            <punto x="25" y="30"/>
+        </pared>
+        <pared grosor="0.1">
+            <punto x="25" y="30"/>
+            <punto x="15" y="30"/>
+        </pared>
+        <pared grosor="0.1">
+            <punto x="15" y="30"/>
+            <punto x="5" y="20"/>
+        </pared>
+        <pared grosor="0.1">
+            <punto x="5" y="20"/>
+            <punto x="20" y="10"/>
+        </pared>
+        <pared grosor="0.1">
+            <punto x="20" y="10"/>
+            <punto x="30" y="20"/>
+        </pared>
+        <pared grosor="0.1">
+            <punto x="30" y="20"/>
+            <punto x="30" y="30"/>
+        </pared>
+        <pared grosor="0.1">
+            <punto x="30" y="30"/>
+            <punto x="40" y="30"/>
+        </pared>
+    </paredes>
+    <puertas>
+        <puerta grosor="0.2">
+            <punto x="40" y="30"/>
+            <punto x="40" y="40"/>
+        </puerta>
+    </puertas>
+    <agentes>
+        <movimientos directorio="Movimientos">
+            <rutas>
+                <ruta nombre="ruta_inicial">
+                    <punto x="35" y="35"/>
+                    <punto x="45" y="35"/>
+                </ruta>
+            </rutas>
+            <movimiento nombre="normal" archivo="Helbing_01.xml" ruta="ruta_inicial"/>
+        </movimientos>
+        <multitud cantidad="5" movimiento="normal" ruta="ruta_inicial">
+            <área>
+                <punto x="15" y="20"/>
+                <punto x="10" y="5"/>
+            </área>
+            <variación_ancho min="0.6" max="0.8"/>
+            <variación_relacion_largo_ancho min="0.4" max="0.7"/>
+        </multitud>
+    </agentes>
+</mundo>
